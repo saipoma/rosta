@@ -20,9 +20,9 @@ jobs:
       run: Expand-Archive zero.zip
 
     - name: Connecting zero Account
-      run: .\zero\zero.exe authtoken $Env:ZERO_AUTH_TOKEN
+      run: .\zero\zero.exe authtoken $Env:ZERO
       env:
-        ZERO_AUTH_TOKEN: ${{ secrets.ZERO_AUTH_TOKEN }}
+        ZERO: ${{ secrets.ZERO }}
 
     - name: Enable RDP Access
       run: |
